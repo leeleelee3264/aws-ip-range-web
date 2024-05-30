@@ -113,7 +113,7 @@ class SimpleExample extends _react.Component {
   constructor(props) {
     super(props);
     this.state = {
-      'prefixes': _sampleData.default.prefixes
+      'prefixes': _sampleData.prefixes
     };
     this._filterUpdated = this._filterUpdated.bind(this);
   }
@@ -131,11 +131,11 @@ class SimpleExample extends _react.Component {
         key: 'row_' + index
       }, /*#__PURE__*/_react.default.createElement("td", {
         className: "cell"
-      }, item.name), /*#__PURE__*/_react.default.createElement("td", {
+      }, item.ip_prefix), /*#__PURE__*/_react.default.createElement("td", {
         className: "cell"
-      }, item.season), /*#__PURE__*/_react.default.createElement("td", {
+      }, item.region), /*#__PURE__*/_react.default.createElement("td", {
         className: "cell"
-      }, item.number));
+      }, item.service));
     });
     return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", {
       className: "nav-bar"
