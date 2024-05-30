@@ -120,7 +120,7 @@ class SimpleExample extends _react.Component {
 
   _filterUpdated(newData, filtersObject) {
     this.setState({
-      'episodes': newData
+      'prefixes': newData
     });
   }
 
