@@ -35,7 +35,7 @@ def read_ip_range(filename) -> str:
     return data
 
 
-def compare_ip_range(old_file, new_file) -> bool:
+def is_the_same_ip_range(old_file, new_file) -> bool:
     old_ip = read_ip_range(old_file)
     new_ip = read_ip_range(new_file)
 
@@ -47,5 +47,5 @@ move_to_old_ip_range(NEW_IP_RANGE_FILE, OLD_IP_RANGE_FILE)
 fetch_new_ip_range()
 
 # compare to check if the ip ranges are updated.
-t = compare_ip_range(NEW_IP_RANGE_FILE, OLD_IP_RANGE_FILE)
+t = is_the_same_ip_range(NEW_IP_RANGE_FILE, OLD_IP_RANGE_FILE)
 print(t)
