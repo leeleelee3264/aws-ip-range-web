@@ -112,6 +112,7 @@
 
             class SimpleExample extends _react.Component {
                 constructor(props) {
+                    console.log(_sampleData.default)
                     super(props);
                     this.state = {
                         'episodes': _sampleData.default._embedded.episodes
