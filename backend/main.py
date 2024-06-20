@@ -8,7 +8,6 @@ TOP_COMPONENT_FILE = "component/top.js"
 BOTTOM_COMPONENT_FILE = "component/bottom.js"
 BUNDDLE_JS_FILE = "../docs/bundle.js"
 
-
 FETCH_URL = 'https://ip-ranges.amazonaws.com/ip-ranges.json'
 
 
@@ -48,7 +47,6 @@ def is_the_same_ip_range() -> bool:
 
 
 def combine_bundle_js() -> None:
-
     try:
         with open(TOP_COMPONENT_FILE, 'r') as file:
             top_component = file.read()
@@ -75,9 +73,14 @@ def combine_bundle_js() -> None:
 
 
 def format_json_to_str(json_input: dict) -> str:
-    return (" \"{\\\"ip_prefix\\\": " + "\\\"" + json_input['ip_prefix'] + "\"" + ", \n  \"region\\\": \\\"" + json_input['region'] + "\\\", " +
-            "\\\"service\\\": \\\"" + json_input['service'] + "\\\"   },\" \n")
-
+    s = ("    \"{\" \n +" +
+         "\"      \\\"ip_prefix\\\": \\\"3.5.140.0/22\\\", \" \n +" +
+         "\"      \\\"region\\\": \\\"ap-northeast-2\\\", \" \n +" +
+         "\"      \\\"service\\\": \\\"AMAZON\\\", \" \n +" +
+         "\"      \\\"network_border_group\\\": \\\"ap-northeast-2\\\" \" \n +" +
+         "\"   }, \" \n +"
+         )
+    return s
 
 # init
 move_to_old_ip_range()

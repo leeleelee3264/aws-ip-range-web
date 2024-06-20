@@ -7704,4 +7704,7 @@ object-assign
         /* 12 */
         /***/ (function(module) {
 
-            module.exports = JSON.parse(" \"profixes\ : [\n" +
+            module.exports = JSON.parse("{\n" +
+                "  \"syncToken\": \"1717011189\",\n" +
+                "  \"createDate\": \"2024-05-29-19-33-09\",\n" +
+                "  \"prefixes\": [\n" +
