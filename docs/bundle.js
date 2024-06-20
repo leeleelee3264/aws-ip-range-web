@@ -64335,8 +64335,7 @@ object-assign
  +"      \"service\": \"AMAZON\", " 
  +"      \"network_border_group\": \"ap-northeast-2\" " 
  +"   }, " 
- +"    }\n" +
-"  ]\n" +
+ +"  ]\n" +
 "}");
 
 /***/ }),
