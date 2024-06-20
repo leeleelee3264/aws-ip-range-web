@@ -1,4 +1,3 @@
-
 /******/ (function(modules) { // webpackBootstrap
     /******/ 	// The module cache
     /******/ 	var installedModules = {};
@@ -112,25 +111,21 @@
 
             class SimpleExample extends _react.Component {
                 constructor(props) {
-
                     super(props);
                     this.state = {
-                        'episodes': _sampleData.default.prefixes
+                        'prefixes': _sampleData.default.prefixes
                     };
                     this._filterUpdated = this._filterUpdated.bind(this);
-
                 }
 
                 _filterUpdated(newData, filtersObject) {
                     this.setState({
-                        'episodes': newData
+                        'prefixes': newData
                     });
                 }
 
                 render() {
-                    const episodes = this.state.episodes;
-
-                    console.log(episodes)
+                    const episodes = this.state.prefixes;
                     const elementsHtml = episodes.map((item, index) => {
                         return /*#__PURE__*/_react.default.createElement("tr", {
                             key: 'row_' + index
