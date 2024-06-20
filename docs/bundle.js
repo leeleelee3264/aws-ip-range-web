@@ -115,7 +115,7 @@
                     console.log(_sampleData.default)
                     super(props);
                     this.state = {
-                        'episodes': _sampleData.default._embedded.episodes
+                        'episodes': _sampleData.default.prefixes
                     };
                     this._filterUpdated = this._filterUpdated.bind(this);
                 }
