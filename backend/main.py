@@ -60,8 +60,13 @@ def combine_bundle_js() -> None:
         with open(BUNDDLE_JS_FILE, 'w') as file:
             file.write(top_component)
 
-            for ip in ip_ranges:
-                formatted_ip = format_json_to_str(ip)
+            for index, ip in enumerate(ip_ranges):
+                is_last = False
+
+                if index == len(ip_ranges) - 1:
+                    is_last = True
+
+                formatted_ip = format_json_to_str(ip, is_last)
                 file.write(formatted_ip)
 
             file.write(bottom_component)
@@ -72,7 +77,7 @@ def combine_bundle_js() -> None:
         print(f"An unexpected error occurred: {e}")
 
 
-def format_json_to_str(json_input: dict) -> str:
+def format_json_to_str(json_input: dict, is_last=False) -> str:
     s = ("    \"{\" \n +" +
          "\"      \\\"ip_prefix\\\": \\\"3.5.140.0/22\\\", \" \n +" +
          "\"      \\\"region\\\": \\\"ap-northeast-2\\\", \" \n +" +
@@ -80,7 +85,17 @@ def format_json_to_str(json_input: dict) -> str:
          "\"      \\\"network_border_group\\\": \\\"ap-northeast-2\\\" \" \n +" +
          "\"   }, \" \n +"
          )
+
+    if is_last:
+        s = ("    \"{\" \n +" +
+             "\"      \\\"ip_prefix\\\": \\\"3.5.140.0/22\\\", \" \n +" +
+             "\"      \\\"region\\\": \\\"ap-northeast-2\\\", \" \n +" +
+             "\"      \\\"service\\\": \\\"AMAZON\\\", \" \n +" +
+             "\"      \\\"network_border_group\\\": \\\"ap-northeast-2\\\" \" \n +" +
+             "\"   } \" \n +"
+             )
     return s
+
 
 # init
 move_to_old_ip_range()

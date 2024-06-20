@@ -112,12 +112,15 @@
 
             class SimpleExample extends _react.Component {
                 constructor(props) {
-                    console.log(_sampleData.default)
+
                     super(props);
                     this.state = {
                         'episodes': _sampleData.default.prefixes
                     };
                     this._filterUpdated = this._filterUpdated.bind(this);
+
+                    console.log(this.state)
+                    console.log(this._filterUpdated)
                 }
 
                 _filterUpdated(newData, filtersObject) {
