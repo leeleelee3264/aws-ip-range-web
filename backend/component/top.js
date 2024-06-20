@@ -119,8 +119,6 @@
                     };
                     this._filterUpdated = this._filterUpdated.bind(this);
 
-                    console.log(this.state)
-                    console.log(this._filterUpdated)
                 }
 
                 _filterUpdated(newData, filtersObject) {
@@ -131,16 +129,18 @@
 
                 render() {
                     const episodes = this.state.episodes;
+
+                    console.log(episodes)
                     const elementsHtml = episodes.map((item, index) => {
                         return /*#__PURE__*/_react.default.createElement("tr", {
                             key: 'row_' + index
                         }, /*#__PURE__*/_react.default.createElement("td", {
                             className: "cell"
-                        }, item.name), /*#__PURE__*/_react.default.createElement("td", {
+                        }, item.ip_prefix), /*#__PURE__*/_react.default.createElement("td", {
                             className: "cell"
-                        }, item.season), /*#__PURE__*/_react.default.createElement("td", {
+                        }, item.region), /*#__PURE__*/_react.default.createElement("td", {
                             className: "cell"
-                        }, item.number));
+                        }, item.service));
                     });
                     return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", {
                         className: "nav-bar"
@@ -158,21 +158,21 @@
                         rows: episodes,
                         onFilterUpdate: this._filterUpdated
                     }, /*#__PURE__*/_react.default.createElement("th", {
-                        key: "name",
-                        filterkey: "name",
+                        key: "ip_prefix",
+                        filterkey: "ip_prefix",
                         className: "cell",
                         casesensitive: 'true',
                         showsearch: 'true'
-                    }, "Name"), /*#__PURE__*/_react.default.createElement("th", {
-                        key: "season",
-                        filterkey: "season",
+                    }, "ip_prefix"), /*#__PURE__*/_react.default.createElement("th", {
+                        key: "region",
+                        filterkey: "region",
                         className: "cell"
-                    }, "Season"), /*#__PURE__*/_react.default.createElement("th", {
-                        key: "number",
-                        filterkey: "number",
+                    }, "region"), /*#__PURE__*/_react.default.createElement("th", {
+                        key: "service",
+                        filterkey: "service",
                         className: "cell",
                         alignleft: 'true'
-                    }, "Number"))), /*#__PURE__*/_react.default.createElement("tbody", null, elementsHtml)))));
+                    }, "service"))), /*#__PURE__*/_react.default.createElement("tbody", null, elementsHtml)))));
                 }
 
             }
