@@ -79,18 +79,18 @@ def combine_bundle_js() -> None:
 
 def format_json_to_str(json_input: dict, is_last=False) -> str:
     s = ("    \"{\" \n +" +
-         "\"      \\\"ip_prefix\\\": \\\"3.5.140.0/22\\\", \" \n +" +
-         "\"      \\\"region\\\": \\\"ap-northeast-2\\\", \" \n +" +
-         "\"      \\\"service\\\": \\\"AMAZON\\\", \" \n +" +
+         "\"      \\\"ip_prefix\\\": \\\"" + json_input['ip_prefix'] + "\\\", \" \n +" +
+         "\"      \\\"region\\\": \\\"" + json_input['region'] + "\\\", \" \n +" +
+         "\"      \\\"service\\\": \\\"" + json_input['service'] + "\\\", \" \n +" +
          "\"      \\\"network_border_group\\\": \\\"ap-northeast-2\\\" \" \n +" +
          "\"   }, \" \n +"
          )
 
     if is_last:
         s = ("    \"{\" \n +" +
-             "\"      \\\"ip_prefix\\\": \\\"3.5.140.0/22\\\", \" \n +" +
-             "\"      \\\"region\\\": \\\"ap-northeast-2\\\", \" \n +" +
-             "\"      \\\"service\\\": \\\"AMAZON\\\", \" \n +" +
+             "\"      \\\"ip_prefix\\\": \\\"" + json_input['ip_prefix'] + "\\\", \" \n +" +
+             "\"      \\\"region\\\": \\\"" + json_input['region'] + "\\\", \" \n +" +
+             "\"      \\\"service\\\": \\\"" + json_input['service'] + "\\\", \" \n +" +
              "\"      \\\"network_border_group\\\": \\\"ap-northeast-2\\\" \" \n +" +
              "\"   } \" \n +"
              )
