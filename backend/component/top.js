@@ -141,13 +141,13 @@
                         className: "nav-bar"
                     }, /*#__PURE__*/_react.default.createElement("div", {
                         className: "container"
-                    }, "React Table Filters")), /*#__PURE__*/_react.default.createElement("div", {
+                    }, "by leeleelee3264")), /*#__PURE__*/_react.default.createElement("div", {
                         className: "examples"
                     }, /*#__PURE__*/_react.default.createElement("div", {
                         className: "basic"
                     }, /*#__PURE__*/_react.default.createElement("h3", {
                         className: "header"
-                    }, "Basic Usage"), /*#__PURE__*/_react.default.createElement("table", {
+                    }, "AWS IP Table"), /*#__PURE__*/_react.default.createElement("table", {
                         className: "basic-table"
                     }, /*#__PURE__*/_react.default.createElement("thead", null, /*#__PURE__*/_react.default.createElement(_bundle.default, {
                         rows: episodes,
