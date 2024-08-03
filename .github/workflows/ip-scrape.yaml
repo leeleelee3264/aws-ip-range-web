@@ -38,7 +38,7 @@ jobs:
           python "main.py"
       - name: Commits
         run: |
-          git config --local user.email "absinthe4902@naver.com"
+          git config --local user.email "absinthe4902@gmail.com"
           git config --local user.name "AUTO_COMMIT_GIT_ACTION"
           git pull
           git add .
